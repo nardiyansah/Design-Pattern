@@ -2,7 +2,7 @@ package pattern.adapter;
 
 public interface HumanInterface {
 
-    void eat();
+    String eat();
 
-    void die();
+    String die();
 }
