@@ -8,13 +8,13 @@ class DatabaseTest {
 
     @Test
     void getPort() {
-        Database db1 = new Database();
-        Database db2 = new Database();
+        Database db1 = Database.getInstance();
+        Database db2 = Database.getInstance();
 
-        assertNotEquals(db1, db2, "instance object must not equal");
+        assertEquals(db1, db2, "instance object must equal");
 
         System.out.println("port of db1 " + db1.getPort());
         System.out.println("port of db2 " + db2.getPort());
-        assertNotEquals(db1.getPort(), db2.getPort(), "port must not equal");
+        assertEquals(db1.getPort(), db2.getPort(), "port must equal");
     }
 }
