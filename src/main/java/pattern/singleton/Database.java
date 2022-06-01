@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class Database {
 
-    private final Integer port;
+    private final Integer PORT;
 
     public Database() {
         Random random = new Random();
-        this.port = random.nextInt(10000);
+        this.PORT = random.nextInt(10000);
     }
 
     public Integer getPort() {
-        return port;
+        return PORT;
     }
 }
