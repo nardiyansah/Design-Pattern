@@ -8,15 +8,17 @@ class RobotTest {
 
     @Test
     void eat() {
-        HumanInterface robot = new Robot();
+        Robot robot = new Robot();
+        HumanInterface robotAdapter = new RobotAdapter(robot);
 
-        assertEquals("This creature need charge", robot.eat());
+        assertEquals("This creature need charge", robotAdapter.eat());
     }
 
     @Test
     void die() {
-        HumanInterface robot = new Robot();
+        Robot robot = new Robot();
+        HumanInterface robotAdapter = new RobotAdapter(robot);
 
-        assertEquals("This creature will shutdown", robot.die());
+        assertEquals("This creature will shutdown", robotAdapter.die());
     }
 }
