@@ -7,16 +7,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class RobotTest {
 
     @Test
-    void charge() {
-        Robot robot = new Robot();
+    void eat() {
+        HumanInterface robot = new Robot();
 
-        assertEquals("This creature need charge", robot.charge());
+        assertEquals("This creature need charge", robot.eat());
     }
 
     @Test
-    void shutdown() {
-        Robot robot = new Robot();
+    void die() {
+        HumanInterface robot = new Robot();
 
-        assertEquals("This creature will shutdown", robot.shutdown());
+        assertEquals("This creature will shutdown", robot.die());
     }
 }
