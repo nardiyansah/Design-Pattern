@@ -8,10 +8,13 @@ class TransportTest {
 
     @Test
     void media() {
-        Transport truck = new Truck();
-        assertEquals("Truck's media is road", truck.media());
+        String type = "truck";
+        Transport t = TransportFactory.createTransport(type);
 
-        Transport ship = new Ship();
-        assertEquals("Ship's media is sea", ship.media());
+        if (type.equals("truck")) {
+            assertEquals("Truck's media is road", t.media());
+        } else {
+            assertEquals("Ship's media is sea", t.media());
+        }
     }
 }
